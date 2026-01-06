@@ -1,0 +1,72 @@
+/* APPLYING TEAM COLOR PALETTE */
+:root {
+    --p-black: #0D0D0D;      /* Backgrounds & Text */
+    --l-gray: #D9D9D9;       /* Borders */
+    --m-gray: #736E6E;       /* Subtext */
+    --off-white: #F2F2F2;    /* Sections */
+    --charcoal: #403D3E;     /* Secondary buttons */
+    --success-green: #2ecc71; /* Accent from your logo */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--p-black);
+    background-color: #ffffff;
+}
+
+.fw-800 { font-weight: 800; }
+
+/* NAVBAR */
+.navbar { background: #fff; }
+.nav-link-custom { color: var(--m-gray); text-decoration: none; font-weight: 500; }
+.nav-link-custom:hover { color: var(--p-black); }
+
+/* BUTTONS */
+.btn-team-primary {
+    background-color: var(--p-black);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-team-primary:hover {
+    background-color: var(--charcoal);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero { background: linear-gradient(180deg, #fff 0%, var(--off-white) 100%); }
+.text-gradient {
+    color: var(--success-green);
+    background: linear-gradient(90deg, var(--p-black), var(--success-green));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-muted-custom { color: var(--m-gray); }
+
+.badge-new {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #fff;
+    border: 1px solid var(--l-gray);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.badge-new span {
+    color: var(--success-green);
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+/* DASHBOARD MOCKUP REPRESENTATION */
+.mockup-container {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--l-gray);
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.dummy-card { background: var(--l-gray); border-radius: 8px; min-height: 40px; opacity: 0.5; }
+
+/* FOOTER/TRUST LOGOS */
+.opacity-50 { opacity: 0.5; filter: grayscale(1); }
