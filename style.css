@@ -16,12 +16,10 @@ body {
 
 .fw-800 { font-weight: 800; }
 
-/* NAVBAR */
 .navbar { background: #fff; }
 .nav-link-custom { color: var(--m-gray); text-decoration: none; font-weight: 500; }
 .nav-link-custom:hover { color: var(--p-black); }
 
-/* BUTTONS */
 .btn-team-primary {
     background-color: var(--p-black);
     color: white;
@@ -34,11 +32,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* HERO SECTION */
 .hero { background: linear-gradient(180deg, #fff 0%, var(--off-white) 100%); }
 .text-gradient {
-    color: var(--success-green);
-    background: linear-gradient(90deg, var(--p-black), var(--success-green));
+    color: var(--m-gray);
+    background: linear-gradient(90deg, var(--p-black), var(--m-gray));
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -59,7 +56,6 @@ body {
     margin-right: 8px;
 }
 
-/* DASHBOARD MOCKUP REPRESENTATION */
 .mockup-container {
     background: white;
     border-radius: 12px;
@@ -68,5 +64,4 @@ body {
 .dot { width: 8px; height: 8px; border-radius: 50%; }
 .dummy-card { background: var(--l-gray); border-radius: 8px; min-height: 40px; opacity: 0.5; }
 
-/* FOOTER/TRUST LOGOS */
 .opacity-50 { opacity: 0.5; filter: grayscale(1); }
