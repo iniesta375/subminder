@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | SubShield</title>
+    <title>Reset Password | SubShield</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             margin: 0;
         }
 
-        .login-card {
+        .recovery-card {
             background: white;
             border-radius: 24px;
             overflow: hidden;
@@ -34,9 +34,9 @@
             width: 100%;
             max-width: 950px;
             border: 1px solid var(--l-gray);
-            display: flex;
         }
 
+        /* Side Branding Panel */
         .brand-panel {
             background-color: var(--p-black);
             color: white;
@@ -44,12 +44,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
-
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
         }
 
         .logo-box {
@@ -63,12 +57,13 @@
             border-radius: 10px;
         }
 
+        /* Form Side */
         .form-panel {
             padding: 60px;
             background: white;
         }
 
-        .login-title {
+        .recovery-title {
             font-weight: 800;
             color: var(--p-black);
             margin-bottom: 8px;
@@ -111,129 +106,78 @@
             transform: translateY(-2px);
         }
 
-        .btn-google {
-            background: white;
-            border: 1px solid var(--l-gray);
-            color: var(--p-black);
-            border-radius: 12px;
-            padding: 12px;
-            width: 100%;
-            font-weight: 600;
-            display: flex;
+        .back-link {
+            color: var(--m-gray);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
+            gap: 8px;
             transition: 0.2s;
         }
 
-        .btn-google:hover {
-            background: var(--off-white);
+        .back-link:hover {
+            color: var(--p-black);
         }
 
-        .divider {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin: 30px 0;
-            color: var(--m-gray);
-            font-size: 0.8rem;
+        @media (max-width: 768px) {
+            .brand-panel { display: none; }
+            .form-panel { padding: 40px 24px; }
+            .recovery-card { border: none; box-shadow: none; background: transparent; }
         }
-
-        .divider::before, .divider::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid var(--l-gray);
-        }
-
-        .divider:not(:empty)::before { margin-right: 15px; }
-        .divider:not(:empty)::after { margin-left: 15px; }
-
-@media (max-width: 991.98px) {
-    .brand-panel { 
-        display: none !important; 
-    }
-
-    .form-panel { 
-        padding: 30px 20px !important; 
-        width: 100% !important;
-    }
-
-    .login-card { 
-        border: none !important; 
-        box-shadow: none !important; 
-        background: transparent !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    body {
-        height: auto !important;
-        min-height: 100vh;
-        align-items: flex-start !important;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
     </style>
 </head>
 <body>
 
     <div class="container d-flex justify-content-center px-3">
-        <div class="login-card row g-0 w-100" style="max-width: 950px;">
+        <div class="recovery-card row g-0">
             
-            <div class="col-md-5 brand-panel d-none d-md-flex">
+            <div class="col-md-5 brand-panel">
                 <div class="brand-logo d-flex align-items-center gap-2">
                     <div class="logo-box">
-                        <i class="bi bi-shield-plus"></i>
+                        <i class="bi bi-key-fill"></i>
                     </div>
-                    <span class="fs-4 fw-bold">Subsminder</span>
+                    <span class="fs-4 fw-bold">SubShield</span>
                 </div>
                 
                 <div class="brand-message">
-                    <h2 class="fw-bold mb-3">Master your <br>subscriptions.</h2>
+                    <h2 class="fw-bold mb-3">Forgot your <br>password?</h2>
                     <p style="color: var(--l-gray); font-size: 0.95rem;">
-                        Join thousands of users who never pay for a forgotten trial again. Secure, simple, and always free.
+                        No worries! It happens to the best of us. Enter your email and we'll send you instructions to reset your password.
                     </p>
                 </div>
 
                 <div class="brand-footer small" style="color: var(--m-gray);">
-                    &copy; 2026 Subsminder Project
+                    &copy; 2026 SubShield Project
                 </div>
             </div>
 
-            <div class="col-12 col-md-7 form-panel">
+            <div class="col-md-7 form-panel">
                 <div class="mb-5">
-                    <h2 class="login-title">Sign In</h2>
-                    <p class="text-muted small">Access your personalized dashboard</p>
+                    <a href="./signIn.html" class="back-link mb-4">
+                        <i class="bi bi-arrow-left"></i> Back to Login
+                    </a>
+                    <h2 class="recovery-title mt-3">Reset Password</h2>
+                    <p class="text-muted small">We'll send a recovery link to your inbox</p>
                 </div>
 
                 <form>
-                    <div class="mb-3">
-                        <label class="form-label">Email Address</label>
+                    <div class="mb-4">
+                        <label class="form-label">Registered Email Address</label>
                         <input type="email" class="form-control" placeholder="name@company.com" required>
                     </div>
-                    
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <label class="form-label">Password</label>
-                            <a href="./forgot.html" class="small text-decoration-none" style="color: var(--m-gray);">Forgot?</a>
-                        </div>
-                        <input type="password" class="form-control" placeholder="••••••••" required>
-                    </div>
 
-                    <button type="submit" class="btn btn-primary-team mb-3">Login to SubShield</button>
+                    <button type="submit" class="btn btn-primary-team mb-4">Send Reset Link</button>
                 </form>
 
-                <div class="divider">OR</div>
-
-                <button class="btn btn-google mb-4">
-                    <img src="../img/google.png" width="18"  alt="Google">
-                    Continue with Google
-                </button>
-
-                <p class="text-center small" style="color: var(--m-gray);">
-                    Don't have an account? <a href="../signUp/signUp.html" class="fw-bold text-decoration-none" style="color: var(--p-black);">Create one</a>
-                </p>
+                <div class="alert p-3 rounded-4 border-0" style="background-color: var(--off-white);">
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-info-circle-fill" style="color: var(--charcoal);"></i>
+                        <p class="small mb-0" style="color: var(--m-gray);">
+                            Can't find the email? Check your spam folder or contact our support team.
+                        </p>
+                    </div>
+                </div>
             </div>
 
         </div>

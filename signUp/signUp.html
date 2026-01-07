@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | SubShield</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --p-black: #0D0D0D;
+            --l-gray: #D9D9D9;
+            --m-gray: #736E6E;
+            --off-white: #F2F2F2;
+            --charcoal: #403D3E;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .signup-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 950px;
+            border: 1px solid var(--l-gray);
+        }
+
+        /* Side Branding Panel */
+        .brand-panel {
+            background-color: var(--p-black);
+            color: white;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background: white;
+            color: var(--p-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        /* Form Side */
+        .form-panel {
+            padding: 60px;
+            background: white;
+        }
+
+        .signup-title {
+            font-weight: 800;
+            color: var(--p-black);
+            margin-bottom: 8px;
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            background-color: var(--off-white);
+            border: 1px solid var(--l-gray);
+            border-radius: 12px;
+            padding: 12px;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            background-color: white;
+            border-color: var(--p-black);
+            box-shadow: 0 0 0 4px rgba(13, 13, 13, 0.05);
+        }
+
+        .btn-primary-team {
+            background-color: var(--p-black);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 14px;
+            font-weight: 700;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-primary-team:hover {
+            background-color: var(--charcoal);
+            transform: translateY(-2px);
+        }
+
+        .btn-google {
+            background: white;
+            border: 1px solid var(--l-gray);
+            color: var(--p-black);
+            border-radius: 12px;
+            padding: 12px;
+            width: 100%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.2s;
+        }
+
+        .btn-google:hover {
+            background: var(--off-white);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+            color: var(--m-gray);
+            font-size: 0.8rem;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--l-gray);
+        }
+
+        .divider:not(:empty)::before { margin-right: 15px; }
+        .divider:not(:empty)::after { margin-left: 15px; }
+
+        .form-check-label {
+            font-size: 0.8rem;
+            color: var(--m-gray);
+        }
+
+        @media (max-width: 768px) {
+            .brand-panel { display: none; }
+            .form-panel { padding: 40px 24px; }
+            .signup-card { border: none; box-shadow: none; background: transparent; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container d-flex justify-content-center px-3">
+        <div class="signup-card row g-0">
+            
+            <div class="col-md-5 brand-panel">
+                <div class="brand-logo">
+                    <div class="logo-box">
+                        <i class="bi bi-shield-plus"></i>
+                    </div>
+                    <span class="fs-4 fw-bold">Subsminder</span>
+                </div>
+                
+                <div class="brand-message">
+                    <h2 class="fw-bold mb-3">Start your <br>savings journey.</h2>
+                    <p style="color: var(--l-gray); font-size: 0.95rem;">
+                        Create an account to start tracking your free trials. We’ll make sure you never miss a cancellation deadline again.
+                    </p>
+                    <ul class="list-unstyled mt-4 small" style="color: var(--l-gray);">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> Unlimited trial tracking</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> Real-time countdowns</li>
+                        <li><i class="bi bi-check-circle-fill me-2"></i> Instant email alerts</li>
+                    </ul>
+                </div>
+
+                <div class="brand-footer small" style="color: var(--m-gray);">
+                    &copy; 2026 Subsminder Project
+                </div>
+            </div>
+
+            <div class="col-md-7 form-panel">
+                <div class="mb-4">
+                    <h2 class="signup-title">Create Account</h2>
+                    <p class="text-muted small">Join Subsminder and take control today</p>
+                </div>
+
+                <form>
+                    <div class="row g-3 mb-3">
+                        <div class="col-sm-6">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" placeholder="Alex" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Morgan" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="name@gmail.com" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="At least 8 characters" required>
+                    </div>
+
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label" for="terms">
+                            I agree to the <a href="#" class="text-dark fw-bold text-decoration-none">Terms of Service</a> and <a href="#" class="text-dark fw-bold text-decoration-none">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary-team mb-3">Create Free Account</button>
+                </form>
+
+                <div class="divider">OR</div>
+
+                <button class="btn btn-google mb-4">
+                    <img src="../img/google.png" width="18"  alt="Google">
+                    Sign up with Google
+                </button>
+
+                <p class="text-center small" style="color: var(--m-gray);">
+                    Already have an account? <a href="../signIn/signIn.html" class="fw-bold text-decoration-none" style="color: var(--p-black);">Sign In</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
