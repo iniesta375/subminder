@@ -1,4 +1,5 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "firebase/auth";
 
   const firebaseConfig = {
     apiKey: "AIzaSyDBPPeJaDIpQ3l6MgGHcrAYgUXRvRmEJPU",
@@ -10,5 +11,15 @@
     appId: "1:967844106132:web:305b6a876595266a198981"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+  
+  onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});

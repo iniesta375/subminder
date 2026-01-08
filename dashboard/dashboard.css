@@ -4,7 +4,6 @@
     --medium-gray: #736E6E;
     --bg-off-white: #F2F2F2;
     --charcoal: #403D3E;
-    --accent-green: #198754;
     
     --soft-success: rgba(25, 135, 84, 0.1);
     --soft-warning: #fff9e6;
@@ -19,12 +18,74 @@ body {
     overflow-x: hidden;
 }
 
+:root {
+    --primary-black: #0D0D0D;
+    --charcoal: #403D3E;
+    --medium-gray: #736E6E;
+    --bg-off-white: #F2F2F2;
+    --light-gray: #D9D9D9;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-off-white);
+}
+
+#sidebar-wrapper {
+    width: 280px;
+    height: 100vh;
+    background-color: var(--primary-black);
+    position: fixed;
+    padding: 30px 20px;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-left: 280px;
+    padding: 40px;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.brand-logo { color: white; font-weight: 800; font-size: 1.5rem; margin-bottom: 30px; }
+
+.user-pill {
+    background: var(--charcoal);
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.nav-link {
+    color: var(--medium-gray);
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+body.pg-subs #nav-subs, 
+body.pg-trials #nav-trials, 
+body.pg-analytics #nav-analytics, 
+body.pg-settings #nav-settings {
+    background: var(--charcoal);
+    color: white;
+}
+
 #wrapper {
     display: flex;
     width: 100vw;
 }
 
-/* SIDEBAR BASE */
 #sidebar-wrapper {
     min-height: 100vh;
     width: 260px;
@@ -34,28 +95,24 @@ body {
     transition: margin 0.3s ease-in-out;
 }
 
-/* --- PURE CSS RESPONSIVE TOGGLE LOGIC --- */
 
 @media (max-width: 991.98px) {
     #sidebar-wrapper {
-        margin-left: -260px; /* Hide by default */
+        margin-left: -260px;
         position: fixed;
         z-index: 1050;
     }
 
-    /* Target sibling: If checkbox is checked, move sidebar */
     #nav-toggle:checked ~ #wrapper #sidebar-wrapper {
         margin-left: 0;
     }
 
-    /* Optional: Dim the content when menu is open */
     #nav-toggle:checked ~ #wrapper #page-content-wrapper {
         filter: brightness(0.6);
         pointer-events: none;
     }
 }
 
-/* NAVIGATION LINKS */
 .nav-link {
     color: var(--medium-gray);
     padding: 12px 15px;
@@ -70,7 +127,6 @@ body {
     background: var(--charcoal);
 }
 
-/* DASHBOARD COMPONENTS */
 #page-content-wrapper {
     flex: 1;
     min-height: 100vh;
