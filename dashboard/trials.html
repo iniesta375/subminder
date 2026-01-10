@@ -12,11 +12,12 @@
     <aside id="sidebar-wrapper">
         <div class="d-flex align-items-center">
                         <div class="logo-shield me-2">
-                            <i class="bi bi-shield-fill text-dark"></i>
+                            <i class="bi bi-shield-fill text-light"></i>
                         </div>
-                        <span class="fs-5 fw-bold text-white">Subsminder</span>
+                                                <a href="../index.html" style="text-decoration: none;"><span class="fs-5 fw-bold text-white">Subsminder</span></a>
+
                     </div>
-        <div class="user-info px-4 mb-4 mt-4">
+        <div class="user-info px-2 mb-4 mt-4">
                 <div class="d-flex align-items-center p-2 rounded-3" style="background: var(--charcoal);">
                     <img src="https://ui-avatars.com/api/?name=Alex+Morgan&background=D9D9D9&color=0D0D0D" class="rounded-circle me-2" width="35" alt="Profile">
                     <div class="overflow-hidden">
@@ -25,13 +26,33 @@
                     </div>
                 </div>
             </div>
-        <nav>
-                <a href="dashboard.html" class="nav-link"><i class="bi bi-grid-1x2 me-3"></i>Dashboard</a>
-            <a href="subscription.html" class="nav-link" id="nav-subs"><i class="bi bi-credit-card"></i> Subscriptions</a>
-            <a href="trials.html" class="nav-link" id="nav-trials"><i class="bi bi-clock-history"></i> Free Trials</a>
-            <a href="analytic.html" class="nav-link" id="nav-analytics"><i class="bi bi-graph-up"></i> Analytics</a>
-            <a href="settings.html" class="nav-link" id="nav-settings"><i class="bi bi-gear"></i> Settings</a>
-        </nav>
+        <div class="nav-label text-secondary extra-small mb-2">MAIN MENU</div>
+            <nav class="nav flex-column mb-4">
+                <a href="dashboard.html" class="nav-link text-white-50 p-2 d-flex align-items-center gap-2" id="nav-dash">
+                    <i class="bi bi-house-door"></i> Dashboard
+                </a>
+                <a href="analytic.html" class="nav-link text-white-50 p-2 d-flex align-items-center gap-2" id="nav-analytics">
+                    <i class="bi bi-graph-up"></i> Analytics
+                </a>
+            </nav>
+
+            <div class="nav-label text-secondary extra-small mb-2">MANAGE</div>
+            <nav class="nav flex-column">
+                <a href="subscription.html" class="nav-link text-white-50 p-2 d-flex align-items-center gap-2" id="nav-subs">
+                    <i class="bi bi-arrow-repeat"></i> Subscriptions
+                </a>
+                <a href="trials.html" class="nav-link text-white-50 p-2 d-flex align-items-center gap-2" id="nav-trials">
+                    <i class="bi bi-clock"></i> Free Trials
+                </a>
+                <a href="settings.html" class="nav-link text-white-50 p-2 d-flex align-items-center gap-2" id="nav-settings">
+                    <i class="bi bi-gear"></i> Settings</a>
+            </nav>
+
+            <div class="mt-auto">
+            <a href="../index.html" class="nav-link text-danger p-2 ">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </div>
     </aside>
 
     <main class="main-content">
