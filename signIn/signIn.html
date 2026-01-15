@@ -9,11 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --p-black: #0D0D0D;
-            --l-gray: #D9D9D9;
-            --m-gray: #736E6E;
-            --off-white: #F2F2F2;
-            --charcoal: #403D3E;
+            --p-black: #96b6c5;    /* Blue-Grey */
+            --l-gray: #cce6e1;     /* Mint */
+            --m-gray: #736E6E;     /* Neutral Text */
+            --off-white: #f1f0e8;  /* Off-white */
+            --charcoal: #454d52;   /* Deep charcoal for text */
+            --accent: #eee0c9;     /* Sand */
         }
 
         body {
@@ -30,7 +31,7 @@
             background: white;
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(150, 182, 197, 0.15);
             width: 100%;
             max-width: 950px;
             border: 1px solid var(--l-gray);
@@ -55,7 +56,7 @@
         .logo-box {
             width: 40px;
             height: 40px;
-            background: white;
+            background: var(--accent);
             color: var(--p-black);
             display: flex;
             align-items: center;
@@ -70,7 +71,7 @@
 
         .login-title {
             font-weight: 800;
-            color: var(--p-black);
+            color: var(--charcoal);
             margin-bottom: 8px;
         }
 
@@ -92,7 +93,7 @@
         .form-control:focus {
             background-color: white;
             border-color: var(--p-black);
-            box-shadow: 0 0 0 4px rgba(13, 13, 13, 0.05);
+            box-shadow: 0 0 0 4px rgba(150, 182, 197, 0.1);
         }
 
         .btn-primary-team {
@@ -107,14 +108,15 @@
         }
 
         .btn-primary-team:hover {
-            background-color: var(--charcoal);
+            background-color: #7fa1b0;
             transform: translateY(-2px);
+            color: white;
         }
 
         .btn-google {
             background: white;
             border: 1px solid var(--l-gray);
-            color: var(--p-black);
+            color: var(--charcoal);
             border-radius: 12px;
             padding: 12px;
             width: 100%;
@@ -191,12 +193,12 @@
                 
                 <div class="brand-message">
                     <h2 class="fw-bold mb-3">Master your <br>subscriptions.</h2>
-                    <p style="color: var(--l-gray); font-size: 0.95rem;">
+                    <p style="color: var(--off-white); font-size: 0.95rem; opacity: 0.9;">
                         Join thousands of users who never pay for a forgotten trial again. Secure, simple, and always free.
                     </p>
                 </div>
 
-                <div class="brand-footer small" style="color: var(--m-gray);">
+                <div class="brand-footer small" style="color: var(--accent); opacity: 0.8;">
                     &copy; 2026 Subsminder Project
                 </div>
             </div>
@@ -216,7 +218,7 @@
                     <div class="mb-4">
                         <div class="d-flex justify-content-between">
                             <label class="form-label">Password</label>
-                            <a href="./forgot.html" class="small text-decoration-none" style="color: var(--m-gray);">Forgot?</a>
+                            <a href="./forgot.html" class="small text-decoration-none" style="color: var(--p-black);">Forgot?</a>
                         </div>
                         <input type="password" id="passWord" class="form-control" placeholder="••••••••" required>
                     </div>

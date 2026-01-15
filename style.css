@@ -1,14 +1,14 @@
 :root {
-    --p-black: #0D0D0D;
-    --l-gray: #D9D9D9;
-    --m-gray: #736E6E;
-    --off-white: #F2F2F2;
-    --charcoal: #403D3E;
+    --p-black: #96b6c5;
+    --l-gray: #cce6e1;
+    --m-gray: #eee0c9;
+    --off-white: #f1f0e8;
+    --charcoal: #454d52;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--p-black);
+    color: var(--charcoal);
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -17,6 +17,10 @@ body {
 .bg-black-team { background-color: var(--p-black); }
 .bg-offwhite-team { background-color: var(--off-white); }
 .bg-charcoal { background-color: var(--charcoal); }
+
+/* Color overrides for your provided classes */
+.text-primary-custom { color: var(--p-black); }
+.text-secondary { color: var(--l-gray) !important; }
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(40px); }
@@ -53,7 +57,7 @@ body {
     padding-top: 100px;
     padding-bottom: 0;
     overflow: hidden;
-    background: radial-gradient(circle at top right, #f8f9fa, #ffffff);
+    background: radial-gradient(circle at top right, #ffffff, var(--off-white));
 }
 
 .dashboard-preview {
@@ -66,11 +70,11 @@ body {
 .wave-container-bottom { line-height: 0; transform: rotate(180deg); }
 
 .step-bubble { 
-            width: 60px; height: 60px; background: white; color: var(--p-black); 
-            border: 4px solid var(--p-black); border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; 
-            font-weight: 800; margin: 0 auto 15px;
-        }
+    width: 60px; height: 60px; background: white; color: var(--p-black); 
+    border: 4px solid var(--p-black); border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; 
+    font-weight: 800; margin: 0 auto 15px;
+}
 
 .btn-team-primary {
     background-color: var(--p-black);
@@ -87,14 +91,14 @@ body {
 }
 
 .feature-box {
-    background: #1a1a1a;
+    background: #ffffff;
     transition: 0.3s;
-    border: 1px solid #333;
+    border: 1px solid var(--l-gray);
 }
 
 .feature-box:hover {
-    background: #252525;
-    border-color: var(--charcoal);
+    background: #ffffff;
+    border-color: var(--p-black);
     transform: scale(1.05);
 }
 
@@ -149,3 +153,6 @@ html {
 
 .pricing-card { transition: 0.3s; }
 .pricing-card:hover { transform: translateY(-10px); }
+
+/* Added spacing for your calculator section */
+.py-100 { padding: 100px 0; }

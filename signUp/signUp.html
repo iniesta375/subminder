@@ -9,11 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --p-black: #0D0D0D;
-            --l-gray: #D9D9D9;
-            --m-gray: #736E6E;
-            --off-white: #F2F2F2;
-            --charcoal: #403D3E;
+            /* Updated to your team colors */
+            --p-black: #96b6c5;    /* Blue-Grey */
+            --l-gray: #cce6e1;     /* Mint */
+            --m-gray: #736E6E;     /* Neutral Text */
+            --off-white: #f1f0e8;  /* Off-white */
+            --charcoal: #454d52;   /* Deep charcoal for text */
+            --accent: #eee0c9;     /* Sand */
         }
 
         body {
@@ -31,7 +33,7 @@
             background: white;
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(150, 182, 197, 0.15);
             width: 100%;
             max-width: 950px;
             border: 1px solid var(--l-gray);
@@ -55,7 +57,7 @@
         .logo-box {
             width: 40px;
             height: 40px;
-            background: white;
+            background: var(--accent); /* Updated to Sand color */
             color: var(--p-black);
             display: flex;
             align-items: center;
@@ -70,7 +72,7 @@
 
         .signup-title {
             font-weight: 800;
-            color: var(--p-black);
+            color: var(--charcoal);
             margin-bottom: 8px;
         }
 
@@ -92,7 +94,7 @@
         .form-control:focus {
             background-color: white;
             border-color: var(--p-black);
-            box-shadow: 0 0 0 4px rgba(13, 13, 13, 0.05);
+            box-shadow: 0 0 0 4px rgba(150, 182, 197, 0.1);
         }
 
         .btn-primary-team {
@@ -107,14 +109,15 @@
         }
 
         .btn-primary-team:hover {
-            background-color: var(--charcoal);
+            background-color: #7fa1b0;
             transform: translateY(-2px);
+            color: white;
         }
 
         .btn-google {
             background: white;
             border: 1px solid var(--l-gray);
-            color: var(--p-black);
+            color: var(--charcoal);
             border-radius: 12px;
             padding: 12px;
             width: 100%;
@@ -175,17 +178,17 @@
                 
                 <div class="brand-message">
                     <h2 class="fw-bold mb-3">Start your <br>savings journey.</h2>
-                    <p style="color: var(--l-gray); font-size: 0.95rem;">
+                    <p style="color: var(--off-white); font-size: 0.95rem; opacity: 0.9;">
                         Create an account to start tracking your free trials. We’ll make sure you never miss a cancellation deadline again.
                     </p>
-                    <ul class="list-unstyled mt-4 small" style="color: var(--l-gray);">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> Unlimited trial tracking</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> Real-time countdowns</li>
-                        <li><i class="bi bi-check-circle-fill me-2"></i> Instant email alerts</li>
+                    <ul class="list-unstyled mt-4 small" style="color: var(--off-white); opacity: 0.9;">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--accent);"></i> Unlimited trial tracking</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--accent);"></i> Real-time countdowns</li>
+                        <li><i class="bi bi-check-circle-fill me-2" style="color: var(--accent);"></i> Instant email alerts</li>
                     </ul>
                 </div>
 
-                <div class="brand-footer small" style="color: var(--m-gray);">
+                <div class="brand-footer small" style="color: var(--accent); opacity: 0.8;">
                     &copy; 2026 Subsminder Project
                 </div>
             </div>
@@ -221,7 +224,7 @@
                     <div class="mb-4 form-check">
                         <input type="checkbox" class="form-check-input" id="terms" required>
                         <label class="form-check-label" for="terms">
-                            I agree to the <a href="#" class="text-dark fw-bold text-decoration-none">Terms of Service</a> and <a href="#" class="text-dark fw-bold text-decoration-none">Privacy Policy</a>
+                            I agree to the <a href="terms.html" class="fw-bold text-decoration-none" style="color: var(--p-black);">Terms of Service</a> and <a href="privacy.html" class="fw-bold text-decoration-none" style="color: var(--p-black);">Privacy Policy</a>
                         </label>
                     </div>
 

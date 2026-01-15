@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Subsminder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --p-blue: #96b6c5;
+            --mint: #cce6e1;
+            --off-white: #f1f0e8;
+            --text-dark: #454d52;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .legal-container {
+            max-width: 800px;
+            background: white;
+            padding: 60px;
+            margin: 80px auto;
+            border-radius: 24px;
+            border: 1px solid var(--mint);
+        }
+
+        h1, h4 { color: var(--p-blue); font-weight: 800; }
+        .back-link { color: var(--p-blue); text-decoration: none; font-weight: 600; margin-bottom: 30px; display: inline-flex; align-items: center; gap: 8px; }
+
+        @media (max-width: 768px) {
+            .legal-container { padding: 30px 20px; margin: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="legal-container">
+            <a href="signUp.html" class="back-link"><i class="bi bi-arrow-left"></i> Back to Home</a>
+            <h1>Privacy Policy</h1>
+            <p class="text-muted">Effective Date: January 15, 2026</p>
+            <hr class="my-4" style="border-color: var(--mint);">
+
+            <h4>1. Data We Collect</h4>
+            <p>We collect your email address and name during registration. We also store the names of the services you are trialing and their respective expiry dates to provide you with reminder alerts.</p>
+
+            <h4>2. How We Use Your Information</h4>
+            <p>Your data is used solely to:
+                <ul>
+                    <li>Send you trial expiration notifications.</li>
+                    <li>Personalize your dashboard experience.</li>
+                    <li>Secure your account via Firebase Authentication.</li>
+                </ul>
+            </p>
+
+            <h4>3. Data Security</h4>
+            <p>We use Firebase (a Google Cloud Platform) to store your data securely. We do not sell your personal data to third parties. Your information is encrypted and protected by bank-grade security protocols.</p>
+
+            <h4>4. Third-Party Services</h4>
+            <p>If you choose to sign in with Google, we receive only your basic profile information (name and email) as permitted by Google's privacy settings.</p>
+
+            <div class="mt-5 p-4 rounded-4" style="background-color: var(--mint); color: var(--text-dark);">
+                <p class="mb-0 small text-center fw-bold">Your privacy is our priority. We will never sell your data.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
